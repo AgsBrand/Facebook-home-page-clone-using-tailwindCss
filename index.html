@@ -7,12 +7,17 @@
     <title>Facebook Home Page Clone Using TailwindCss</title>
     <!-- TailwindCss Cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
-<body class="bg-[#e4e6eb]">
+<body class="bg-[#e4e6eb] min-h-screen">
 
     <!-- Navbar starting from here -->
-    <nav class="bg-white w-screen h-[50px] shadow flex">
+    <nav class="bg-white max-w-screen sticky top-0 h-[50px] shadow flex border-box">
 
         <!-- Logo and search bar -->
         <div class="w-[25vw] flex px-[20px] items-center">
@@ -29,8 +34,7 @@
             <div class="mx-5 relative w-full h-[40px] bg-[#e4e6eb] rounded-[40px]">
                 <!-- search icon -->
                 <div class="absolute top-1/2 left-5 transform -translate-x-1/2 -translate-y-1/2">
-                    <svg fill="text-slate-900" viewBox="0 0 16 16" width="1.5em" height="1.5em"
-                        class="x1lliihq x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od">
+                    <svg fill="text-slate-900" viewBox="0 0 16 16" width="1.0em" height="1.0em" class="text-slate-500">
                         <g fill-rule="evenodd" transform="translate(-448 -544)">
                             <g fill-rule="nonzero">
                                 <path
@@ -62,9 +66,8 @@
 
                 <!-- Home Item -->
                 <div class="flex-1 h-full items-center justify-center relative mx-2">
-                    <div class="flex items-center justify-center h-full" >
-                        <svg fill="currentColor" viewBox="0 0 24 24" width="1.5em" height="1.5em"
-                            class="text-blue-500">
+                    <div class="flex items-center justify-center h-full">
+                        <svg fill="currentColor" viewBox="0 0 24 24" width="1.5em" height="1.5em" class="text-blue-500">
                             <path
                                 d="M9.464 1.286C10.294.803 11.092.5 12 .5c.908 0 1.707.303 2.537.786.795.462 1.7 1.142 2.815 1.977l2.232 1.675c1.391 1.042 2.359 1.766 2.888 2.826.53 1.059.53 2.268.528 4.006v4.3c0 1.355 0 2.471-.119 3.355-.124.928-.396 1.747-1.052 2.403-.657.657-1.476.928-2.404 1.053-.884.119-2 .119-3.354.119H7.93c-1.354 0-2.471 0-3.355-.119-.928-.125-1.747-.396-2.403-1.053-.656-.656-.928-1.475-1.053-2.403C1 18.541 1 17.425 1 16.07v-4.3c0-1.738-.002-2.947.528-4.006.53-1.06 1.497-1.784 2.888-2.826L6.65 3.263c1.114-.835 2.02-1.515 2.815-1.977zM10.5 13A1.5 1.5 0 0 0 9 14.5V21h6v-6.5a1.5 1.5 0 0 0-1.5-1.5h-3z">
                             </path>
@@ -113,7 +116,7 @@
         </div>
 
         <!-- Messanger notification profile menu of right -->
-        <div class="w-[25vw] pr-[10px] flex items-center justify-end">
+        <div class="w-[25vw] mr-3 flex items-center justify-end">
             <!-- Burger icon -->
             <div class="bg-[#e4e6eb] w-[40px] h-[40px] rounded-[50%] mx-1 flex items-center justify-center">
                 <svg fill="currentColor" viewBox="0 0 24 24" width="50%" height="50%"
@@ -151,6 +154,248 @@
             </div>
         </div>
     </nav>
+    <!-- Navbar ending here -->
+
+    <section class="main-content flex h-full w-full min-h-[calc(100vh-50px)]">
+        <!-- Left sidebar of main content -->
+        <div class="left-sidebar flex flex-col justify-between w-[25vw] h-full fixed p-[10px]">
+
+            <!-- left sidebar main content -->
+            <div class="top">
+                <!-- Side menu of left sidebar -->
+                <div class="sideMenu">
+
+                    <!-- all the items -->
+                    <div class="items  border-b border-slate-300 pb-5">
+
+                        <!-- Profile -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px] mt-2">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%]">
+                                <img src="profile.jpeg" alt="Profile" class="w-full h-auto">
+                            </div>
+                            <div class="text-sm">
+                                Abdul Ghaffar Soomro
+                            </div>
+                        </div>
+
+                        <!-- Find Friends -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%]">
+                                <i data-visualcompletion="css-img" class=""
+                                    style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeG6vh_U1z5XIYNXb028bUeFiXYVTRy2fzKJdhVNHLZ_Mpr7J-qemK4XdN8PTu31LEh8VsjFsAC4WX63VDqJWJkj&quot;); background-position: 0px -296px; background-size: auto; width: 36px; height: 36px; background-repeat: no-repeat; display: inline-block;"></i>
+                            </div>
+                            <div class="text-sm">
+                                Find friends
+                            </div>
+                        </div>
+
+                        <!-- Feeds -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%]">
+                                <img draggable="false" height="36" width="36" alt=""
+                                    referrerpolicy="origin-when-cross-origin"
+                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/eECk3ceTaHJ.png?_nc_eui2=AeFdN8KrgLOvb6dmzb2tcuDJi9AM8exRZGeL0Azx7FFkZ7AF44jbnHBs2bGT2YMaRMocRB_gHw8xNqOexBiX-PBF">
+                            </div>
+                            <div class="text-sm">
+                                Feeds
+                            </div>
+                        </div>
+
+                        <!-- Groups -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%]">
+                                <i data-visualcompletion="css-img" class=""
+                                    style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeG6vh_U1z5XIYNXb028bUeFiXYVTRy2fzKJdhVNHLZ_Mpr7J-qemK4XdN8PTu31LEh8VsjFsAC4WX63VDqJWJkj&quot;); background-position: 0px -37px; background-size: auto; width: 36px; height: 36px; background-repeat: no-repeat; display: inline-block;"></i>
+                            </div>
+                            <div class="text-sm">
+                                Groups
+                            </div>
+                        </div>
+
+                        <!-- Marketplace -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%]">
+                                <i data-visualcompletion="css-img" class=""
+                                    style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeG6vh_U1z5XIYNXb028bUeFiXYVTRy2fzKJdhVNHLZ_Mpr7J-qemK4XdN8PTu31LEh8VsjFsAC4WX63VDqJWJkj&quot;); background-position: 0px -407px; background-size: auto; width: 36px; height: 36px; background-repeat: no-repeat; display: inline-block;"></i>
+                            </div>
+                            <div class="text-sm">
+                                Marketplace
+                            </div>
+                        </div>
+
+                        <!-- Video -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%]">
+                                <i data-visualcompletion="css-img" class=""
+                                    style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeG6vh_U1z5XIYNXb028bUeFiXYVTRy2fzKJdhVNHLZ_Mpr7J-qemK4XdN8PTu31LEh8VsjFsAC4WX63VDqJWJkj&quot;); background-position: 0px -518px; background-size: auto; width: 36px; height: 36px; background-repeat: no-repeat; display: inline-block;"></i>
+                            </div>
+                            <div class="text-sm">
+                                Groups
+                            </div>
+                        </div>
+
+                        <!-- Memories -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%] mt-1">
+                                <i data-visualcompletion="css-img" class=""
+                                    style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeG6vh_U1z5XIYNXb028bUeFiXYVTRy2fzKJdhVNHLZ_Mpr7J-qemK4XdN8PTu31LEh8VsjFsAC4WX63VDqJWJkj&quot;); background-position: 0px -444px; background-size: auto; width: 36px; height: 36px; background-repeat: no-repeat; display: inline-block;"></i>
+                            </div>
+                            <div class="text-sm">
+                                Memories
+                            </div>
+                        </div>
+
+                        <!-- Saved -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%] mt-1">
+                                <i data-visualcompletion="css-img" class=""
+                                    style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/4GR4KRf3hN2.png?_nc_eui2=AeG6vh_U1z5XIYNXb028bUeFiXYVTRy2fzKJdhVNHLZ_Mpr7J-qemK4XdN8PTu31LEh8VsjFsAC4WX63VDqJWJkj&quot;); background-position: 0px -185px; background-size: auto; width: 36px; height: 36px; background-repeat: no-repeat; display: inline-block;"></i>
+                            </div>
+                            <div class="text-sm">
+                                Saved
+                            </div>
+                        </div>
+
+                        <!-- Professional Dashboard -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[50%] mt-1">
+                                <img draggable="false" height="36" width="36" alt=""
+                                    referrerpolicy="origin-when-cross-origin"
+                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/UcI9fM2oUUV.png?_nc_eui2=AeFsl4aRPS6F1MhdLnAI41UaXnfhz3hpqpFed-HPeGmqkW8IevyukAlWMOoZ0n4sDySeIJATfeJq16v4XGfQPUO_">
+                            </div>
+                            <div class="text-sm">
+                                Professional dashboard
+                            </div>
+                        </div>
+
+                        <!-- Pages -->
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div
+                                class="img w-[40px] h-[40px] overflow-hidden rounded-[50%] mt-1 flex items-center justify-center bg-slate-400">
+                                <svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em"
+                                    class="x1lliihq x1k90msu x2h7rmj x1qfuztq x198g3q0 x1qx5ct2 xw4jnvo">
+                                    <g fill-rule="evenodd" transform="translate(-448 -544)">
+                                        <path fill-rule="nonzero"
+                                            d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="text-sm">
+                                Pages
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- All items end here -->
+                </div>
+
+                <!-- shortcuts section -->
+                <div class="shortcuts flex flex-col mt-2 text-slate-500">
+                    <div class="heading">Your shortcuts</div>
+                    <div class="shortcuts mt-2">
+                        <div class="item flex p-1 items-center gap-2 hover:bg-slate-300 rounded-[10px]">
+                            <div class="img w-[40px] h-[40px] overflow-hidden rounded-[10px]">
+                                <img src="https://c8.alamy.com/comp/2K4NYNB/carrom-board-game-illustration-vector-on-a-white-background-2K4NYNB.jpg"
+                                    alt="">
+                            </div>
+                            <div class="text-sm text-black">
+                                Carrom Challenge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer section of left sidebar -->
+            <div class="relative bottom-[50px] text-xs text-slate-500">
+                Privacy Terms Advertising Ad Choices
+                <br>
+                Cookies More Meta &copy; 2023
+            </div>
+        </div>
+
+        <!-- Center content -->
+        <div class="center-content ml-[25vw] p-8 w-[50vw]">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi tempore omnis doloribus quasi eius sint
+            consequatur quisquam corrupti nostrum ad ipsam neque impedit illum possimus earum, aliquam, ipsum soluta
+            incidunt, hic autem vero? Ipsam sit laborum harum ut? Obcaecati maxime expedita accusantium quaerat adipisci
+            voluptatibus itaque provident impedit culpa ullam dicta tempora, sunt, ex voluptas magni doloribus harum
+            quibusdam excepturi porro eveniet necessitatibus, eaque est ipsa. Vitae, nesciunt. Illum id laborum at
+            voluptate accusamus inventore fugit ipsa odio eos voluptatibus quia aut quisquam distinctio impedit tempora
+            sed eligendi porro commodi expedita molestiae, facilis nam voluptas. Tempora illo dicta atque placeat amet
+            itaque eligendi debitis, optio aperiam est maxime laudantium, esse sapiente assumenda delectus vero, quaerat
+            iure molestiae sit voluptate nisi suscipit sint officia. Neque quis facilis praesentium sapiente? Aliquam,
+            est delectus impedit earum, labore obcaecati fuga laboriosam cupiditate quae iste voluptates, vero quas
+            mollitia debitis expedita reiciendis deserunt! Est, tempora velit perspiciatis ratione, et laudantium
+            repellat enim quos porro eum quis sed esse repudiandae saepe, animi minus harum ad sint suscipit temporibus
+            consequatur neque. Ut saepe sit illo incidunt vel voluptatum totam, est esse voluptates, dignissimos maiores
+            sunt perferendis nemo facere aperiam alias nulla nisi ab a, doloremque minima at cumque in? Perferendis
+            earum nam corrupti culpa adipisci cumque provident itaque ab qui, eum modi doloribus et dignissimos vero sit
+            cum illum corporis sed, dolore at! Dolor suscipit, nemo fuga repellat repellendus quis facere in blanditiis
+            odio soluta nesciunt ducimus, sed corrupti consequuntur voluptatum voluptatem unde velit tempore eum iste a
+            magnam minima! Omnis cumque ducimus, inventore sunt quod illum porro temporibus delectus. In doloribus a
+            assumenda illo corporis eligendi tempora quo velit ipsa soluta? Adipisci officia iusto quisquam maxime
+            excepturi quas nisi ex, iure quos dolorum minus esse architecto ducimus explicabo itaque accusamus odio eos
+            impedit rem magni atque? Voluptate deserunt nulla nostrum consequuntur perspiciatis placeat enim, adipisci
+            incidunt ipsum cum libero excepturi perferendis error provident? Itaque, aliquid? Accusamus quis minima,
+            possimus laboriosam eligendi quos quasi voluptates atque perferendis modi libero sit! Obcaecati praesentium
+            dolores reprehenderit? Earum voluptate exercitationem illum deleniti autem recusandae adipisci perferendis
+            quae quis corporis, architecto natus placeat fuga unde explicabo quam perspiciatis voluptates, mollitia eum
+            dolorum nesciunt quia? Maiores veniam ratione temporibus quisquam molestias cupiditate rem dolor
+            voluptatibus! Harum, minima, voluptatibus fugit quam doloremque delectus voluptate dolor sunt, aspernatur
+            facilis non animi. Expedita iure harum perspiciatis voluptates, tenetur laborum laudantium totam, reiciendis
+            dolore minus molestias cum ipsum. Perspiciatis illum rerum error libero fugit, nesciunt maiores quaerat
+            facilis aut magni voluptatem, explicabo consectetur. Exercitationem obcaecati voluptate doloremque. Porro
+            mollitia error ad architecto recusandae, libero magnam voluptatem omnis minus velit aliquid aspernatur, sed
+            molestias ea a maiores! Modi, molestiae explicabo? Voluptas, repellat! Suscipit provident eos cumque
+            explicabo incidunt quod. Voluptatibus atque odit soluta minima placeat commodi eius necessitatibus culpa
+            harum rerum illum tenetur sit voluptatum officia ullam sapiente, dicta doloremque numquam sint nihil a ea
+            dolorum id. Magnam fugit a maxime quos necessitatibus aliquam. Dicta cumque officia et repudiandae! Eaque
+            placeat maxime, porro nulla perferendis repellendus autem incidunt mollitia fugiat ipsum corporis, nobis,
+            illo in sunt beatae sit id iure fuga? Expedita esse repellat perferendis architecto ratione distinctio?
+            Quisquam adipisci assumenda unde, nostrum ipsum minus, atque quaerat, eligendi reiciendis corporis
+            voluptatibus asperiores molestiae? Esse natus corporis libero expedita rem, maiores repellendus iure iste
+            nobis? Voluptas voluptatibus quos repellat amet libero, eligendi qui quia dolorum aut voluptates quis
+            tempora, sed quo. Ab accusamus optio eius quis hic sapiente debitis ipsam culpa, temporibus odio veritatis
+            nobis, perspiciatis sed similique quisquam tenetur nam autem ad iste atque necessitatibus. Dolorem totam
+            debitis maxime praesentium ducimus voluptatum numquam animi adipisci rem laborum aspernatur itaque soluta
+            obcaecati, dolor, sint beatae incidunt modi suscipit repudiandae est quia quis ipsum. Magni ut quidem eum
+            temporibus maxime a quibusdam voluptatibus molestias adipisci alias ducimus, autem illum voluptas quas
+            delectus quasi sequi reiciendis, molestiae minima! Inventore et consectetur, minus voluptatibus ullam
+            quisquam laborum? Aliquid, voluptatem, molestias animi laudantium eveniet distinctio blanditiis harum ipsam
+            ut amet sed eaque deleniti iusto velit aut unde at vitae. Necessitatibus consequuntur quisquam repellat, eum
+            iste vero a odit sed animi, hic tenetur deleniti fugit qui dicta voluptates consectetur ex excepturi id
+            corrupti natus commodi quis dignissimos illum laudantium. Necessitatibus totam culpa numquam, laudantium
+            veniam possimus, quasi, maiores iusto reiciendis assumenda quo? Non dolore pariatur dolores necessitatibus
+            vero consequuntur inventore sapiente amet unde officia! Architecto reprehenderit ut minus recusandae quam
+            harum sint error voluptatum, aliquid laborum quibusdam laboriosam rem quasi odio asperiores deserunt soluta
+            aspernatur, quidem obcaecati provident deleniti. Autem cupiditate vero a facere soluta. Eligendi, eos
+            voluptatum perspiciatis error officia vitae accusantium molestiae suscipit corrupti, voluptas iste sit sed
+            dolorem incidunt doloremque enim velit similique magni quidem quaerat quis illum laudantium numquam. Vel
+            quam itaque voluptates sed distinctio aliquid deserunt dolorem hic dolores a consequuntur beatae, obcaecati
+            reiciendis ipsum animi illo, molestias blanditiis officiis sequi fuga at quas! Nam laboriosam, quos
+            cupiditate quam nemo necessitatibus corrupti rem numquam autem, harum reprehenderit! Pariatur magnam commodi
+            eligendi necessitatibus. Quae repellendus animi eos odit ut eaque consectetur molestias distinctio
+            laboriosam, neque ad laborum nisi nostrum? Sapiente ducimus consequuntur natus, ipsa qui modi voluptatem
+            temporibus possimus accusamus? Provident facere totam aperiam earum, quam officia unde libero mollitia cum
+            recusandae corporis quas aliquid maxime reprehenderit quidem atque sint sed aspernatur dolore, enim debitis
+            repellendus dignissimos voluptas? Neque ducimus minus veniam accusamus rem odio corporis beatae! Molestiae
+            ipsa quis praesentium modi amet sed eligendi earum consequatur mollitia a! Quae dignissimos tempora dolores
+            repellendus animi optio aut voluptatibus odit debitis accusantium vel corporis nobis, aperiam obcaecati
+            facere. Quis repudiandae odit at labore alias quas eveniet. Quo incidunt, illum id, aut consectetur
+            praesentium architecto cum neque reprehenderit ratione fugiat laborum nostrum sint dicta debitis aspernatur
+            sequi quae. Repellat architecto vero perspiciatis nobis sit debitis quas nam velit minus laudantium!
+            Doloribus totam animi provident, nihil magni, officia cumque facilis eum minima ducimus laboriosam quasi
+            corporis, numquam at atque ipsa? Amet facere nesciunt quam a magnam possimus consectetur nisi consequuntur
+            similique repellendus non eos voluptas quaerat, quas, architecto enim deserunt ipsam eveniet?
+        </div>
+
+        <!-- Right sidebar of main content -->
+        <div class="right-content w-[25vw] bg-yellow-200">
+
+        </div>
+    </section>
 </body>
 
 </html>
